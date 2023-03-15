@@ -35,6 +35,14 @@ def get_slot_machine_spin(reels, cols, symbols):
 
     return columns
 
+def print_slot_machine(columns):
+    for reel in range(len(columns[0])):
+        for i, column in enumerate(columns):
+            if i != len(columns) - 1:
+                print(column[reel], "|")
+            else:
+                print(column[reel])
+
 
 def deposit():
     while True:
@@ -98,6 +106,9 @@ def main():
         f"You are betting ${bet} on {chosen_lines} lines. Total bet is equal to: ${total_bet}")
 
     print(balance, chosen_lines)
+
+    slots = get_slot_machine_spin(REELS, COLS, symbol_count)
+    print_slot_machine(slots)
 
 
 main()
