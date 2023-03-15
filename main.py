@@ -39,9 +39,9 @@ def print_slot_machine(columns):
     for reel in range(len(columns[0])):
         for i, column in enumerate(columns):
             if i != len(columns) - 1:
-                print(column[reel], "|")
+                print(column[reel], end=" | ")
             else:
-                print(column[reel])
+                print(column[reel], end="\n")
 
 
 def deposit():
